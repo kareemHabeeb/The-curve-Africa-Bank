@@ -1,0 +1,50 @@
+.notfound_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--color-bg);
+  padding: 20px;
+}
+
+.notfound_card {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border);
+  padding: 48px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+}
+
+.notfound_card h1 {
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--color-accent);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.notfound_card p {
+  color: var(--color-muted);
+  font-size: 16px;
+  margin-bottom: 28px;
+}
+
+.notfound_link {
+  display: inline-block;
+  background: var(--color-primary);
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.notfound_link:hover {
+  background: #1E293B;
+}

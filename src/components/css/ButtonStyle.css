@@ -1,0 +1,48 @@
+.Btn {
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.Btn--primary {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+}
+
+.Btn--primary:hover {
+  background-color: #1E293B;
+}
+
+.Btn--secondary {
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 1.5px solid var(--color-accent);
+}
+
+.Btn--secondary:hover {
+  background-color: rgba(37, 99, 235, 0.06);
+}
+
+.Btn--danger {
+  background-color: transparent;
+  color: var(--color-danger);
+  border: 1.5px solid var(--color-danger);
+}
+
+.Btn--danger:hover {
+  background-color: #FEF2F2;
+}
+
+.Form_Btn {
+  width: 100%;
+}

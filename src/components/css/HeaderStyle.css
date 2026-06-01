@@ -1,0 +1,122 @@
+.header_Container {
+  width: 100%;
+  height: 64px;
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.Header_Wrapper {
+  width: 95%;
+  max-width: 1400px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Header_Brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.Header_Brand_Icon {
+  color: var(--color-accent);
+  font-size: 22px;
+}
+
+.Header_Wrapper h3 {
+  color: var(--color-accent);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.Header_Wrapper h3 span {
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+.Header_Wrapper_Right {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  justify-content: flex-end;
+}
+
+.header_Profile_Holder {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.Header_Profile {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.header_Profile_Holder h5 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #CBD5E1;
+}
+
+.Header_Btn {
+  width: auto;
+  padding: 0 16px;
+  height: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: transparent;
+  color: #FFFFFF;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.Header_Btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: none;
+}
+
+.Header_Mobile_Toggle {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header_Profile_Holder h5 {
+    display: none;
+  }
+
+  .Header_Btn {
+    display: none;
+  }
+
+  .Header_Mobile_Toggle {
+    display: block;
+    color: #FFFFFF;
+    font-size: 26px;
+  }
+
+  .Header_Mobile_Toggle .Icon {
+    cursor: pointer;
+  }
+}

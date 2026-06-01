@@ -1,0 +1,78 @@
+.AddAccount_Page {
+  width: 100%;
+  min-height: calc(100vh - 64px);
+  background: var(--color-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.AddAccount_Card {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border);
+  padding: 2rem;
+  width: 100%;
+  max-width: 440px;
+}
+
+.AddAccount_Header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.AddAccount_Header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+
+.AddAccount_Header p {
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
+.AddAccount_Form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.AddAccount_Field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.AddAccount_Field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.AddAccount_Field input {
+  height: 44px;
+  border-radius: var(--radius-sm);
+  outline: none;
+  border: 1.5px solid var(--color-border);
+  padding: 0 14px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--color-text);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.AddAccount_Field input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.AddAccount_Form .Btn--primary {
+  width: 100%;
+  margin-top: 4px;
+}
