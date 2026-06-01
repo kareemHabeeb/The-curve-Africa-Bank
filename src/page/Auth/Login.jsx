@@ -1,16 +1,20 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Login.css";
-import { FaRegEye, FaRegEyeSlash, FaUser, FaLock, FaSpinner } from "react-icons/fa";
+import {
+  FaRegEye,
+  FaRegEyeSlash,
+  FaUser,
+  FaLock,
+  FaSpinner,
+} from "react-icons/fa";
 // import { useContext } from "react";
 // import { AuthContext } from "../../context/AuthContext.jsx";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { setAccessToken, setRefreshToken, setUser } from "../../redux/apiSlice";
 import axios from "axios";
-import Swal from 'sweetalert2'
-
-
+import Swal from "sweetalert2";
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -29,36 +33,77 @@ const LoginPage = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    try{
+    try {
       setLoading(true);
-      const response = await axios.post(`${apiUrl}/auth/login`, { email, password });
+      const response = await axios.post(`${apiUrl}/auth/login`, {
+        email,
+        password,
+      });
       Swal.fire({
-      position: "top-end",
-      icon: "success",
-      title: "Login successful",
-      showConfirmButton: false,
-      timer: 1500
-    });
-    const responsData = response.data;
-    console.log("responsData",responsData.user);
-    dispatch(setAccessToken(responsData?.accessToken));
-    dispatch(setRefreshToken(responsData?.refreshToken));
-    dispatch(setUser(responsData?.user));
-    
+        position: "top-end",
+        icon: "success",
+        title: "Login successful",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      const responsData = response.data;
+      console.log("responsData", responsData.user);
+      dispatch(setAccessToken(responsData?.accessToken));
+      dispatch(setRefreshToken(responsData?.refreshToken));
+      dispatch(setUser(responsData?.user));
+
       navigate("/dashboard");
-    }catch(error){
+    } catch (error) {
       Swal.fire({
         icon: "error",
         title: "Oops...",
         text: error.response.data.message,
       });
-    }finally{
+    } finally {
       setLoading(false);
     }
-  }
+  };
 
   return (
     <div className="login_container">
+      <div className="auth_showcase">
+        <div className="showcase_content">
+          <span className="bank_badge">🏦 SecureBank</span>
+
+          <h1>Digital Banking You Can Trust</h1>
+
+          <p>
+            Manage your accounts, transfer money securely, track transactions in
+            real time, and enjoy enterprise-grade protection.
+          </p>
+
+          <div className="security_cards">
+            <div className="security_card">
+              <span>🔒</span>
+              <div>
+                <h4>256-bit Encryption</h4>
+                <p>Your data stays protected.</p>
+              </div>
+            </div>
+
+            <div className="security_card">
+              <span>🛡️</span>
+              <div>
+                <h4>Fraud Monitoring</h4>
+                <p>24/7 security checks.</p>
+              </div>
+            </div>
+
+            <div className="security_card">
+              <span>⚡</span>
+              <div>
+                <h4>Instant Transfers</h4>
+                <p>Move money in seconds.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="login_card">
         <div className="login_header">
           <h1>Bank Login</h1>
@@ -71,7 +116,14 @@ const LoginPage = () => {
             <label htmlFor="email">Email Address</label>
             <div className="input_wrapper">
               <FaUser className="input_icon" />
-              <input type="email" id="email" value={email} placeholder="Enter your email" required={true} onChange={(e) => setEmail(e.target.value)} />
+              <input
+                type="email"
+                id="email"
+                value={email}
+                placeholder="Enter your email"
+                required={true}
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
           </div>
 

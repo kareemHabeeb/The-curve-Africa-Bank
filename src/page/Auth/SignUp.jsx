@@ -72,6 +72,44 @@ const SignUp = () => {
   // console.log(userDetails);
   return (
     <div className="login_container">
+      <div className="auth_showcase">
+        <div className="showcase_content">
+          <span className="bank_badge">🏦 SecureBank</span>
+
+          <h1>Digital Banking You Can Trust</h1>
+
+          <p>
+            Manage your accounts, transfer money securely, track transactions in
+            real time, and enjoy enterprise-grade protection.
+          </p>
+
+          <div className="security_cards">
+            <div className="security_card">
+              <span>🔒</span>
+              <div>
+                <h4>256-bit Encryption</h4>
+                <p>Your data stays protected.</p>
+              </div>
+            </div>
+
+            <div className="security_card">
+              <span>🛡️</span>
+              <div>
+                <h4>Fraud Monitoring</h4>
+                <p>24/7 security checks.</p>
+              </div>
+            </div>
+
+            <div className="security_card">
+              <span>⚡</span>
+              <div>
+                <h4>Instant Transfers</h4>
+                <p>Move money in seconds.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="login_card signup_card">
         <div className="login_header">
           <h1>Create Your Account</h1>
@@ -193,7 +231,7 @@ const SignUp = () => {
 
           {/* Signup Button */}
           <button type="submit" className="login_btn" disabled={loading}>
-            {loading ? <FaSpinner className="spinner" /> : "Sign Up"}
+            {loading ? "please wait..." : "Sign Up"}
           </button>
         </form>
 
